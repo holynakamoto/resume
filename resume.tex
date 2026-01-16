@@ -1,0 +1,147 @@
+% Updated AltaCV template for Nick Moore - January 2026
+% Compiles with pdfLaTeX, XeLaTeX, LuaLaTeX
+\documentclass[10pt,a4paper,withhyper]{altacv}
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+\usepackage{paracol}
+
+\iftutex
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Colors - keeping your suggested palette with subtle tech vibe
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+
+\begin{document}
+
+\name{Nick Moore}
+\tagline{Principal SRE \& Platform Engineer}
+
+% Optional: add a professional photo if you have one (uncomment & upload image)
+% \photoR{2.8cm}{your-photo.jpg}
+
+\personalinfo{%
+  \email{nick.moore@pm.me}
+  \phone{303-515-1883}
+  \location{Littleton / Denver, Colorado, United States}
+  \homepage{nick-moore.lovable.app}
+  \linkedin{nicholasmoore}
+  % \xtwitter{your-handle} % add if you have X/Twitter
+  \github{holynakamoto}   % add if public GitHub exists
+}
+
+\makecvheader
+
+\columnratio{0.6} % Left column wider for experience
+
+\begin{paracol}{2}
+
+\cvsection{Professional Summary}
+AI-savvy Principal SRE \& Platform Engineer with 10+ years designing, scaling, and securing high-traffic infrastructures on AWS, Azure, GCP. CKA-certified expert in Kubernetes (Level 10), Terraform (Level 9), Ansible (Level 10), Docker (Level 10), GitHub Actions (Level 9). Proven in incident response, 99.9\% uptime, cost optimization (20–40\% reductions), and automation at global scale (Pinterest, Talkdesk, financial systems).
+
+Evolving to DevSecOps platform engineering: championing Internal Developer Platforms with Backstage.io + Crossplane for golden paths, shift-left security via Trivy/container/IaC scans, and AI-assisted workflows (Cursor AI, Anthropic Claude, Continue.dev, LangChain) to embed compliance, speed, and soul into self-service development. Always grateful, crafting resilient, meaningful tech that resonates.
+
+\cvsection{Experience}
+
+\cvevent{Principal SRE}{Talkdesk}{Jan 2024 -- Present}{Remote / Denver, CO}
+\begin{itemize}
+\item Own AWS infrastructure for high-traffic cloud contact center; ensure reliability, scalability, performance.
+\item Lead on-call \& incident management; proactive automation to eliminate recurring issues.
+\item Kubernetes orchestration, Python routing/orchestration, observability; plan AI feature scaling.
+\item Automate provisioning; explore Backstage.io + Crossplane golden paths with embedded security.
+\item Integrate shift-left: Trivy scans, AI agents (Cursor/Claude/Continue.dev) for secure code/fixes.
+\end{itemize}
+
+\divider
+
+\cvevent{Network Automation Architect}{Pinterest}{Jan 2022 -- Dec 2024}{Remote}
+\begin{itemize}
+\item Architected AWS network/infra automation for platform serving millions daily.
+\item Built Python/Ansible/Terraform pipelines; reduced config time $\sim$60\%, manual toil.
+\item Designed high-performance routing/workloads; supported capacity planning, observability.
+\item Laid platform engineering foundations, including standardized secure deployments \& IDP concepts.
+\end{itemize}
+
+\divider
+
+\cvevent{VP Site Reliability Engineering}{City National Bank}{Jan 2020 -- Jan 2022}{}
+\begin{itemize}
+\item Led SRE team for critical financial systems (Azure + multi-cloud); ensured compliance, SLAs.
+\item Directed incident response, production stability in regulated environment.
+\item Scaled via containers, CI/CD, Python monitoring/capacity tools.
+\item Advanced automation \& security practices to reduce toil, strengthen posture.
+\end{itemize}
+
+\divider
+
+\cvevent{SRE \& Network Automation Consultant}{Independent / Various Clients}{Jun 2018 -- Present}{Remote}
+\begin{itemize}
+\item Multi-cloud infra (AWS/Azure/GCP) with Terraform/Ansible; 25\% faster deployments, 20\% fewer errors.
+\item Kubernetes clusters (Helm), SDN (OpenFlow/VXLAN/libvirt/KVM); 99.9\% uptime.
+\item Scaled Edgecast CDN 8GB $\to$ 45TB (95\% cache-hit, WAF/DDoS); 20–40\% latency/cost wins.
+\item Built Gemini Prime crypto platform; low-latency, compliant institutional trading.
+\item Integrated AI (LangChain/N8N/Zapier/Pipedream), Windsurf UI, Cursor AI for rapid development.
+\end{itemize}
+
+\switchcolumn
+
+\cvsection{Skills}
+\cvtag{AWS (Expert)}
+\cvtag{Terraform (Lv9)}
+\cvtag{Ansible (Lv10)}
+\cvtag{Kubernetes (CKA, Lv10)}
+\cvtag{Docker (Lv10)}
+\cvtag{GitHub Actions (Lv9)}
+\cvtag{DevSecOps • Shift-Left}
+\cvtag{Trivy • Backstage.io}
+\cvtag{Crossplane • Golden Paths}
+\cvtag{Python • Rust • Golang}
+\cvtag{Cursor AI • Claude • LangChain}
+\cvtag{N8N • Zapier • Pipedream}
+\cvtag{Windsurf UI • SDN/VXLAN}
+\cvtag{Observability • Incident Mgmt}
+\cvtag{99.9\% Uptime Engineering}
+
+\medskip
+
+\cvsection{Education}
+\cvevent{BS Computer Science}{University of Washington}{Sep 1996 -- Jun 2000}{}
+
+\cvsection{Certifications}
+\cvachievement{\faCertificate}{Certified Kubernetes Administrator (CKA)}{Cloud Native Computing Foundation}
+\cvachievement{\faCertificate}{Terraform (Level 9 Mastery)}{}
+\cvachievement{\faCertificate}{Ansible (Level 10 Mastery)}{}
+\cvachievement{\faCertificate}{Docker (Level 10 Mastery)}{}
+\cvachievement{\faCertificate}{Kubernetes (Level 10 Mastery)}{}
+\cvachievement{\faCertificate}{GitHub Actions (Level 9 Mastery)}{}
+
+\cvsection{Highlights}
+\cvachievement{\faTrophy}{23 Elite Skills • 23 Legendary}{1.44M+ Total XP • 99.9\% Mastery Rate}
+\cvachievement{\faRocket}{Recent Thought Leadership}{Golden Paths \& Crossplane, Backstage IaC Reference Impl, AI SRE Accuracy, Quantum/Agentic Commerce (2025--2026 posts)}
+
+\end{paracol}
+
+\end{document}
